@@ -15,5 +15,5 @@ docker build -t fastapi-pandoc .
 3. Run the container
 
 ```bash
-docker run --netowkr=host -p 9000:9000 fastapi-pandoc
+docker run --network=host fastapi-pandoc
 ```
