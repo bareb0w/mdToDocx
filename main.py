@@ -18,7 +18,7 @@ async def convert_md_to_docx(file: UploadFile = File(...)):
 
     try:
         # Run Pandoc command
-        subprocess.run(["pandoc", md_path, "-o", docx_path], check=True)
+        subprocess.run(["pandoc", md_path, "-o", docx_path, "--toc"], check=True)
 
         # Return file as response
         return FileResponse(docx_path, filename=file.filename.replace(".md", ".docx"))
